@@ -29,12 +29,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = `${siteConfig.name} — WordPress & Frontend Developer`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sagorahmed.com"),
   title: {
-    default: `${siteConfig.name} — WordPress & Frontend Developer`,
+    default: title,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.shortTagline,
+  openGraph: {
+    title,
+    description: siteConfig.shortTagline,
+    url: "https://sagorahmed.com",
+    siteName: siteConfig.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: siteConfig.shortTagline,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
