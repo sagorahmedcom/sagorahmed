@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Mail, MapPin, FileDown } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
@@ -19,8 +20,15 @@ export default function AboutPage() {
         <Container className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:items-center">
           <FadeIn className="order-2 flex justify-center lg:order-1">
             <div className="relative">
-              <div className="flex h-64 w-64 items-center justify-center rounded-2xl border border-border bg-gradient-to-br from-accent/20 via-surface to-accent-2/10 font-mono text-6xl font-semibold text-fg sm:h-80 sm:w-80">
-                SA
+              <div className="relative h-64 w-64 overflow-hidden rounded-2xl border border-border sm:h-80 sm:w-80">
+                <Image
+                  src="/sagorahmed.jpg"
+                  alt={siteConfig.name}
+                  fill
+                  sizes="(min-width: 640px) 320px, 256px"
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 rounded-lg border border-border bg-surface px-4 py-2.5 font-mono text-xs text-fg-muted shadow-lg">
                 <span className="text-accent">const</span> role = &quot;builder&quot;;
