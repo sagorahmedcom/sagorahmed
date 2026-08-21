@@ -5,6 +5,7 @@ import Eyebrow from "@/components/Eyebrow";
 import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ContactForm from "@/components/ContactForm";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/data";
 
@@ -32,12 +33,16 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-8 flex flex-col gap-4">
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 text-sm text-fg-muted hover:text-fg">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
-                <Mail size={16} />
-              </span>
-              {siteConfig.email}
-            </a>
+            <ObfuscatedEmail
+              user={siteConfig.emailUser}
+              domain={siteConfig.emailDomain}
+              className="flex items-center gap-3 text-sm text-fg-muted hover:text-fg"
+              icon={
+                <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
+                  <Mail size={16} />
+                </span>
+              }
+            />
             <div className="flex items-center gap-3 text-sm text-fg-muted">
               <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
                 <MapPin size={16} />

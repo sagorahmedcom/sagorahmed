@@ -4,7 +4,9 @@ export const siteConfig = {
   role: "WordPress Developer & Frontend Engineer",
   shortTagline: "I build fast, custom WordPress sites and modern web interfaces.",
   location: "Dhaka, Bangladesh",
-  email: "iamsagorahmed@gmail.com",
+  // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
+  emailUser: "sagor",
+  emailDomain: "sagorahmed.com",
   availableForWork: true,
   yearsExperience: 4,
   projectsShipped: 60,

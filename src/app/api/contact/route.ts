@@ -55,10 +55,10 @@ export async function POST(request: Request) {
     const budgetLabel = budgetOptions.find((o) => o.value === budget)?.label ?? budget;
 
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL ?? "iamsagorahmed@gmail.com",
+      from: process.env.CONTACT_FROM_EMAIL ?? "Sagor Ahmed <noreply@sagorahmed.com>",
+      to: process.env.CONTACT_TO_EMAIL ?? "sagor@sagorahmed.com",
       replyTo: email,
-      subject: `New project inquiry from ${name}`,
+      subject: `New inquiry from website - ${name}`,
       react: ContactEmail({ name, email, budgetLabel, message }),
     });
 

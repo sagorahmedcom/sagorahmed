@@ -6,6 +6,7 @@ import Eyebrow from "@/components/Eyebrow";
 import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { siteConfig, skillGroups, timeline, values } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -61,10 +62,12 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-fg-muted">
-              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1.5 hover:text-fg">
-                <Mail size={13} className="text-accent" />
-                {siteConfig.email}
-              </a>
+              <ObfuscatedEmail
+                user={siteConfig.emailUser}
+                domain={siteConfig.emailDomain}
+                className="flex items-center gap-1.5 hover:text-fg"
+                icon={<Mail size={13} className="text-accent" />}
+              />
               <span className="flex items-center gap-1.5">
                 <MapPin size={13} className="text-accent" />
                 {siteConfig.location}

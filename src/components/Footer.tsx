@@ -3,6 +3,7 @@ import { Briefcase, Mail } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/data";
 import Container from "./Container";
 import { GithubIcon, LinkedinIcon, XIcon } from "./icons";
+import ObfuscatedEmail from "./ObfuscatedEmail";
 
 const iconMap = {
   github: GithubIcon,
@@ -58,13 +59,12 @@ export default function Footer() {
 
         <div>
           <p className="font-mono text-xs uppercase tracking-wider text-fg-faint">Get in touch</p>
-          <a
-            href={`mailto:${siteConfig.email}`}
+          <ObfuscatedEmail
+            user={siteConfig.emailUser}
+            domain={siteConfig.emailDomain}
             className="mt-4 flex items-center gap-2 text-sm text-fg-muted transition-colors hover:text-fg"
-          >
-            <Mail size={15} />
-            {siteConfig.email}
-          </a>
+            icon={<Mail size={15} />}
+          />
           <p className="mt-2.5 text-sm text-fg-muted">{siteConfig.location}</p>
         </div>
       </Container>
