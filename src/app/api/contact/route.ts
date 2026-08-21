@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { contactFormSchema, budgetOptions } from "@/lib/contact-schema";
 import ContactEmail from "@/emails/ContactEmail";
+import CustomerConfirmationEmail from "@/emails/CustomerConfirmationEmail";
 
 async function verifyTurnstile(token: string, remoteip: string | null) {
   const secret = process.env.TURNSTILE_SECRET_KEY;
@@ -53,18 +54,33 @@ export async function POST(request: Request) {
 
     const resend = new Resend(apiKey);
     const budgetLabel = budgetOptions.find((o) => o.value === budget)?.label ?? budget;
+    const fromAddress = process.env.CONTACT_FROM_EMAIL ?? "Sagor Ahmed <noreply@sagorahmed.com>";
+    const ownerAddress = process.env.CONTACT_TO_EMAIL ?? "sagor@sagorahmed.com";
 
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL ?? "Sagor Ahmed <noreply@sagorahmed.com>",
-      to: process.env.CONTACT_TO_EMAIL ?? "sagor@sagorahmed.com",
+      from: fromAddress,
+      to: ownerAddress,
       replyTo: email,
       subject: `New inquiry from website - ${name}`,
       react: ContactEmail({ name, email, budgetLabel, message }),
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend error (owner notification):", error);
       return NextResponse.json({ ok: false, error: "Failed to send your message. Try again later." }, { status: 502 });
+    }
+
+    const { error: confirmationError } = await resend.emails.send({
+      from: fromAddress,
+      to: email,
+      replyTo: ownerAddress,
+      subject: "Thanks for reaching out — Sagor Ahmed",
+      react: CustomerConfirmationEmail({ name, budgetLabel, message }),
+    });
+
+    if (confirmationError) {
+      // Non-fatal: the owner already has the inquiry, so the request still succeeds.
+      console.error("Resend error (customer confirmation):", confirmationError);
     }
 
     return NextResponse.json({ ok: true });
