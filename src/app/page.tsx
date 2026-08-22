@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Code2, Zap, ShieldCheck, Star } from "lucide-react";
+import { ArrowUpRight, Code2, Zap, ShieldCheck, Star, Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import Button from "@/components/Button";
@@ -7,18 +7,10 @@ import TerminalWindow from "@/components/TerminalWindow";
 import Marquee from "@/components/Marquee";
 import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
-import ProjectCard from "@/components/ProjectCard";
 import ServiceCard from "@/components/ServiceCard";
 import BentoStats from "@/components/BentoStats";
-import {
-  siteConfig,
-  trustBadges,
-  marqueeSkills,
-  services,
-  projects,
-  process,
-  testimonials,
-} from "@/lib/data";
+import ProcessSteps from "@/components/ProcessSteps";
+import { siteConfig, trustBadges, marqueeSkills, services } from "@/lib/data";
 
 const trustBadgeIcons = { code: Code2, zap: Zap, shield: ShieldCheck, star: Star };
 
@@ -149,29 +141,31 @@ export default function Home() {
       {/* Projects preview */}
       <section className="py-24">
         <Container>
-          <FadeIn className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <div>
-              <Eyebrow>02 work</Eyebrow>
-              <h2 className="mt-4 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">
-                Selected projects I&apos;ve shipped
-              </h2>
-            </div>
+          <FadeIn>
+            <Eyebrow>02 work</Eyebrow>
+            <h2 className="mt-4 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">Portfolio coming soon</h2>
+          </FadeIn>
+
+          <FadeIn
+            delay={0.08}
+            className="card-surface relative mt-10 flex flex-col items-center gap-4 overflow-hidden rounded-2xl border border-border px-6 py-16 text-center"
+          >
+            <div className="pointer-events-none absolute inset-0 bg-dots opacity-20" />
+            <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 bg-accent-soft text-accent">
+              <Sparkles size={20} />
+            </span>
+            <p className="relative max-w-md text-sm leading-relaxed text-fg-muted">
+              I&apos;m putting together detailed case studies from recent client work. Check back soon — or get in
+              touch and I&apos;ll walk you through examples directly.
+            </p>
             <Link
-              href="/portfolio"
-              className="flex items-center gap-1 font-mono text-sm text-fg-muted transition-colors hover:text-accent"
+              href="/contact"
+              className="relative mt-2 flex items-center gap-1 font-mono text-sm text-accent hover:underline"
             >
-              View full portfolio
+              Get in touch
               <ArrowUpRight size={15} />
             </Link>
           </FadeIn>
-
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 3).map((project, i) => (
-              <FadeIn key={project.slug} delay={i * 0.08}>
-                <ProjectCard project={project} />
-              </FadeIn>
-            ))}
-          </div>
         </Container>
       </section>
 
@@ -183,38 +177,7 @@ export default function Home() {
             <h2 className="mt-4 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">How a project runs</h2>
           </FadeIn>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-4">
-            {process.map((item, i) => (
-              <FadeIn key={item.step} delay={i * 0.08} className="relative">
-                <span className="font-mono text-4xl font-semibold text-fg-faint">{item.step}</span>
-                <h3 className="mt-3 text-base font-semibold text-fg">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-fg-muted">{item.description}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24">
-        <Container>
-          <FadeIn>
-            <Eyebrow>04 feedback</Eyebrow>
-            <h2 className="mt-4 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">What clients say</h2>
-          </FadeIn>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <FadeIn key={t.name} delay={i * 0.08} className="card-surface flex flex-col rounded-xl p-6">
-                <span className="font-mono text-2xl text-accent">&quot;</span>
-                <p className="flex-1 text-sm leading-relaxed text-fg-muted">{t.quote}</p>
-                <div className="mt-5 border-t border-border pt-4">
-                  <p className="text-sm font-medium text-fg">{t.name}</p>
-                  <p className="font-mono text-xs text-fg-faint">{t.role}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <ProcessSteps />
         </Container>
       </section>
 

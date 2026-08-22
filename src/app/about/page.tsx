@@ -19,21 +19,19 @@ export default function AboutPage() {
     <>
       <section className="pb-16 pt-14 sm:pt-20">
         <Container className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:items-center">
-          <FadeIn className="order-2 flex justify-center lg:order-1">
-            <div className="relative">
-              <div className="relative h-64 w-64 overflow-hidden rounded-2xl border border-border sm:h-80 sm:w-80">
-                <Image
-                  src="/sagorahmed.jpg"
-                  alt={siteConfig.name}
-                  fill
-                  sizes="(min-width: 640px) 320px, 256px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 rounded-lg border border-border bg-surface px-4 py-2.5 font-mono text-xs text-fg-muted shadow-lg">
-                <span className="text-accent">const</span> role = &quot;builder&quot;;
-              </div>
+          <FadeIn className="order-2 flex flex-col items-center gap-4 lg:order-1">
+            <div className="relative h-64 w-64 overflow-hidden rounded-2xl border border-border sm:h-80 sm:w-80">
+              <Image
+                src="/sagorahmed.jpg"
+                alt={siteConfig.name}
+                fill
+                sizes="(min-width: 640px) 320px, 256px"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="rounded-lg border border-border bg-surface px-4 py-2.5 font-mono text-xs text-fg-muted shadow-lg">
+              <span className="text-accent">const</span> role = &quot;developer&quot;;
             </div>
           </FadeIn>
 

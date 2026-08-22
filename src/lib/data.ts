@@ -2,8 +2,7 @@ export const siteConfig = {
   name: "Sagor Ahmed",
   handle: "sagorahmed",
   role: "WordPress Developer & Next.js Frontend Engineer",
-  heroSubheadline:
-    "WordPress Developer | Custom Themes & High-Performance Next.js Frontends | 200+ Websites | 7+ Years Experience",
+  heroSubheadline: "WordPress Developer | Custom Themes & High-Performance Next.js Frontends",
   shortTagline: "Custom WordPress themes and high-performance Next.js frontends for businesses worldwide.",
   location: "Dhaka, Bangladesh",
   // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
@@ -65,7 +64,7 @@ export const bentoStats = [
     size: "medium",
     number: `${siteConfig.reviewsCount}+`,
     title: "Client Reviews",
-    description: "Rated 5-stars on Fiverr — we deliver exactly what your business needs.",
+    description: "Rated 5-stars on Fiverr — I deliver exactly what your business needs.",
   },
   {
     id: "experience",
@@ -80,7 +79,7 @@ export const bentoStats = [
     number: `${siteConfig.countriesCount}+`,
     title: `Clients in ${siteConfig.countriesCount}+ Countries`,
     description:
-      "From the US and Canada to Europe, Australia, and Asia — we've delivered projects across 16% of the world's countries.",
+      "From the US and Canada to Europe, Australia, and Asia — I've delivered projects across 16% of the world's countries.",
   },
 ] as const;
 
@@ -198,7 +197,7 @@ export const process = [
   {
     step: "01",
     title: "Discover",
-    description: "We talk through your goals, audience, and scope so the plan matches what your project actually needs.",
+    description: "I'll talk through your goals, audience, and scope so the plan matches what your project actually needs.",
   },
   {
     step: "02",
@@ -227,83 +226,8 @@ export type Project = {
   accent: string;
 };
 
-export const projects: Project[] = [
-  {
-    slug: "northbrew-coffee",
-    title: "Northbrew Coffee Co.",
-    category: "WooCommerce",
-    tags: ["WooCommerce", "ACF", "Custom Theme"],
-    description: "A custom WooCommerce storefront for a specialty coffee roaster with subscription-based checkout.",
-    year: "2025",
-    accent: "from-[#4F52FF]/40 to-[#2B2D8F]/15",
-  },
-  {
-    slug: "flux-dashboard",
-    title: "Flux Analytics Dashboard",
-    category: "Frontend",
-    tags: ["Next.js", "TypeScript", "Charts"],
-    description: "A real-time analytics dashboard built with Next.js, featuring live charts and role-based views.",
-    year: "2025",
-    accent: "from-[#2B2D8F]/45 to-[#4F52FF]/15",
-  },
-  {
-    slug: "studio-marbel",
-    title: "Studio Marbel Agency Site",
-    category: "WordPress",
-    tags: ["Gutenberg Blocks", "GSAP", "SEO"],
-    description: "A motion-rich agency portfolio built on custom Gutenberg blocks for full client editability.",
-    year: "2024",
-    accent: "from-[#4F52FF]/30 to-[#0D0E1A]/45",
-  },
-  {
-    slug: "trailhead-outfitters",
-    title: "Trailhead Outfitters",
-    category: "WooCommerce",
-    tags: ["WooCommerce", "Multi-currency", "CRO"],
-    description: "An outdoor gear store rebuilt for speed, cutting load time by 61% and lifting conversions.",
-    year: "2024",
-    accent: "from-[#2B2D8F]/40 to-[#4F52FF]/25",
-  },
-  {
-    slug: "pulse-saas-landing",
-    title: "Pulse SaaS Landing",
-    category: "Frontend",
-    tags: ["React", "Framer Motion", "Landing Page"],
-    description: "A high-converting landing page for a SaaS product launch with interactive product previews.",
-    year: "2024",
-    accent: "from-[#4F52FF]/45 to-[#2B2D8F]/20",
-  },
-  {
-    slug: "wellness-collective",
-    title: "Wellness Collective",
-    category: "WordPress",
-    tags: ["Custom Theme", "Booking", "ACF Pro"],
-    description: "A booking-enabled WordPress site for a multi-practitioner wellness studio.",
-    year: "2023",
-    accent: "from-[#0D0E1A]/40 to-[#4F52FF]/30",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Sagor rebuilt our WooCommerce store from the ground up and our page speed score went from 41 to 96. Support and communication were excellent throughout.",
-    name: "Amelia Ross",
-    role: "Founder, Northbrew Coffee Co.",
-  },
-  {
-    quote:
-      "We needed a fast turnaround on a Next.js dashboard and Sagor delivered clean, well-documented code ahead of schedule.",
-    name: "Daniel Cho",
-    role: "Product Lead, Flux Analytics",
-  },
-  {
-    quote:
-      "Finally a developer who understands both design and WordPress internals. Our custom blocks are exactly what we envisioned.",
-    name: "Priya Nair",
-    role: "Creative Director, Studio Marbel",
-  },
-];
+// No real case studies published yet — the portfolio pages show a "coming soon" state until this has entries.
+export const projects: Project[] = [];
 
 export const experience = {
   range: "2019 — Present",
@@ -370,7 +294,7 @@ export const faqs = [
   {
     question: "How long does a typical project take?",
     answer:
-      "A landing page usually takes 1–2 weeks. A full custom WordPress or WooCommerce build runs 3–6 weeks. Frontend applications vary based on scope — I'll give you a firm timeline after our discovery call.",
+      "A landing page usually takes 1–2 weeks. A full custom WordPress or WooCommerce build runs 3–6 weeks. Frontend applications vary based on scope — I'll give you a firm timeline after a quick discovery call.",
   },
   {
     question: "Do you offer ongoing support after launch?",

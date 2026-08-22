@@ -4,11 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks, siteConfig } from "@/lib/data";
+import { navLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Container from "./Container";
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -36,11 +37,7 @@ export default function Navbar() {
       )}
     >
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-mono text-sm font-semibold text-fg">
-          <span className="text-accent">{"<"}</span>
-          {siteConfig.name}
-          <span className="text-accent">{"/>"}</span>
-        </Link>
+        <Logo />
 
         <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => {

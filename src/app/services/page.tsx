@@ -6,7 +6,8 @@ import FadeIn from "@/components/FadeIn";
 import Button from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard";
 import FAQAccordion from "@/components/FAQAccordion";
-import { services, process, faqs, siteConfig } from "@/lib/data";
+import ProcessSteps from "@/components/ProcessSteps";
+import { services, faqs, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -49,19 +50,11 @@ export default function ServicesPage() {
           <FadeIn>
             <Eyebrow>the process</Eyebrow>
             <h2 className="mt-4 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">
-              How we&apos;ll work together
+              How I&apos;ll work with you
             </h2>
           </FadeIn>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-4">
-            {process.map((item, i) => (
-              <FadeIn key={item.step} delay={i * 0.08}>
-                <span className="font-mono text-4xl font-semibold text-fg-faint">{item.step}</span>
-                <h3 className="mt-3 text-base font-semibold text-fg">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-fg-muted">{item.description}</p>
-              </FadeIn>
-            ))}
-          </div>
+          <ProcessSteps />
         </Container>
       </section>
 
