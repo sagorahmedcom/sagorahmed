@@ -23,3 +23,43 @@ export function XIcon({ size = 16, className }: IconProps) {
     </svg>
   );
 }
+
+export function WordpressIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M5.8 8.2l2.4 9M9.6 8.2l2.6 6.8 1.4-3.7-1.2-3.1M14.6 8.2l2.4 9 1.6-5.3a4.6 4.6 0 0 0-.4-3.9"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function NextjsIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M8.3 7.5v9M8.3 7.5l7.2 9M15.7 7.5v6.2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function CloudflareIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} className={className} fill="currentColor" aria-hidden="true">
+      <path d="M17.3 17.2H6.9a3.7 3.7 0 0 1-.3-7.4 5.4 5.4 0 0 1 10.4-2 4.6 4.6 0 0 1 3.6 4.5 3.3 3.3 0 0 1-.2 4.9 4 4 0 0 1-3.1 0Z" />
+    </svg>
+  );
+}

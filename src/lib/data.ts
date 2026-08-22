@@ -13,6 +13,7 @@ export const siteConfig = {
   yearsExperience: 7,
   projectsShipped: 200,
   reviewsCount: 125,
+  countriesCount: 30,
   socials: [
     { label: "GitHub", href: "https://github.com/", icon: "github" },
     { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
@@ -42,6 +43,46 @@ export const availableFor = [
   "Performance optimization & site audits",
   "Long-term partnerships",
 ];
+
+export const bentoStats = [
+  {
+    id: "projects",
+    size: "large",
+    number: `${siteConfig.projectsShipped}+`,
+    title: "Projects Delivered",
+    description:
+      "Across WordPress, WooCommerce, custom themes, and Next.js frontends — all performance-focused and client-first.",
+  },
+  {
+    id: "workflow",
+    size: "small",
+    title: "Seamless Dev Workflow",
+    description: "From design to deployment — WordPress, Elementor, and Next.js, kept clean, fast, and collaborative.",
+    icons: ["wordpress", "nextjs", "cloudflare"],
+  },
+  {
+    id: "reviews",
+    size: "medium",
+    number: `${siteConfig.reviewsCount}+`,
+    title: "Client Reviews",
+    description: "Rated 5-stars on Fiverr — we deliver exactly what your business needs.",
+  },
+  {
+    id: "experience",
+    size: "large",
+    number: `${siteConfig.yearsExperience}+`,
+    title: "Years of Experience",
+    description: "Delivering reliable, high-performance websites for clients since 2019.",
+  },
+  {
+    id: "countries",
+    size: "wide",
+    number: `${siteConfig.countriesCount}+`,
+    title: `Clients in ${siteConfig.countriesCount}+ Countries`,
+    description:
+      "From the US and Canada to Europe, Australia, and Asia — we've delivered projects across 16% of the world's countries.",
+  },
+] as const;
 
 export const navLinks = [
   { label: "Home", href: "/" },

@@ -9,6 +9,7 @@ import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ProjectCard from "@/components/ProjectCard";
 import ServiceCard from "@/components/ServiceCard";
+import BentoStats from "@/components/BentoStats";
 import {
   siteConfig,
   trustBadges,
@@ -100,19 +101,9 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-border bg-bg-soft">
-        <Container className="grid grid-cols-2 divide-x divide-y divide-border sm:grid-cols-4 sm:divide-y-0">
-          {[
-            { label: "Projects Delivered", value: `${siteConfig.projectsShipped}+` },
-            { label: "Years Experience", value: `${siteConfig.yearsExperience}+` },
-            { label: "Client Reviews", value: `${siteConfig.reviewsCount}+` },
-            { label: "Multi-Continent Clients", value: "Worldwide" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1 px-4 py-8 text-center">
-              <span className="font-mono text-3xl font-semibold text-accent sm:text-4xl">{stat.value}</span>
-              <span className="text-xs text-fg-muted">{stat.label}</span>
-            </div>
-          ))}
+      <section className="py-20">
+        <Container>
+          <BentoStats />
         </Container>
       </section>
 
