@@ -1,23 +1,47 @@
 export const siteConfig = {
   name: "Sagor Ahmed",
   handle: "sagorahmed",
-  role: "WordPress Developer & Frontend Engineer",
-  shortTagline: "I build fast, custom WordPress sites and modern web interfaces.",
+  role: "WordPress Developer & Next.js Frontend Engineer",
+  heroSubheadline:
+    "WordPress Developer | Custom Themes & High-Performance Next.js Frontends | 200+ Websites | 7+ Years Experience",
+  shortTagline: "Custom WordPress themes and high-performance Next.js frontends for businesses worldwide.",
   location: "Dhaka, Bangladesh",
   // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
   emailUser: "sagor",
   emailDomain: "sagorahmed.com",
   availableForWork: true,
-  yearsExperience: 4,
-  projectsShipped: 60,
-  clientsServed: 35,
+  yearsExperience: 7,
+  projectsShipped: 200,
+  reviewsCount: 125,
   socials: [
     { label: "GitHub", href: "https://github.com/", icon: "github" },
     { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
     { label: "X / Twitter", href: "https://x.com/", icon: "twitter" },
-    { label: "Upwork", href: "https://upwork.com/", icon: "briefcase" },
+    { label: "Fiverr", href: "https://www.fiverr.com/", icon: "briefcase" },
   ],
 };
+
+export const trustBadges = [
+  { title: "Custom Development", subtitle: "Tailored to your goals", icon: "code" },
+  { title: "Performance Focused", subtitle: "Fast, optimized & reliable", icon: "zap" },
+  { title: "Secure & Scalable", subtitle: "Built for long-term growth", icon: "shield" },
+  { title: `${siteConfig.reviewsCount}+ Reviews`, subtitle: "Happy clients on Fiverr", icon: "star" },
+] as const;
+
+export const focusAreas = [
+  "Custom WordPress theme development & site optimization",
+  "Headless WordPress + Next.js frontend builds",
+  "WooCommerce stores that are fast, stable, and easy to manage",
+  "Performance tuning — Core Web Vitals, load speed, SEO-readiness",
+  "Long-term collaboration with international teams & agencies",
+];
+
+export const availableFor = [
+  "Custom WordPress projects",
+  "Next.js / Headless WordPress frontend development",
+  "Performance optimization & site audits",
+  "Long-term partnerships",
+];
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -29,32 +53,29 @@ export const navLinks = [
 
 export const skillGroups = [
   {
-    title: "WordPress",
-    items: ["Custom Theme Dev", "WooCommerce", "ACF Pro", "Elementor / Gutenberg", "Plugin Development", "Speed & SEO"],
+    title: "CMS & E-commerce",
+    items: ["WordPress", "WooCommerce", "Elementor", "Gravity Forms", "JetEngine / Crocoblock"],
   },
   {
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "REST / GraphQL APIs"],
+    items: ["React.js", "Next.js", "JavaScript", "Headless WordPress"],
   },
   {
-    title: "Tools & Workflow",
-    items: ["Git & GitHub", "Figma to Code", "PHP & MySQL", "Vercel / cPanel", "Webpack / Vite", "Performance Audits"],
+    title: "Performance & Delivery",
+    items: ["Core Web Vitals", "Site Speed Optimization", "Cloudflare", "Vercel Deployment"],
   },
 ];
 
 export const marqueeSkills = [
   "WordPress",
-  "PHP",
   "WooCommerce",
-  "ACF Pro",
-  "JavaScript",
-  "TypeScript",
-  "React",
+  "Elementor",
+  "Gravity Forms",
+  "JetEngine / Crocoblock",
   "Next.js",
-  "Tailwind CSS",
-  "MySQL",
-  "REST API",
-  "Figma",
+  "React.js",
+  "JavaScript",
+  "Headless WordPress",
 ];
 
 export const services = [
@@ -243,12 +264,41 @@ export const testimonials = [
   },
 ];
 
-export const timeline = [
-  { year: "2020", title: "git init", description: "Started freelancing part-time, building small WordPress sites for local businesses." },
-  { year: "2021", title: "npm install frontend", description: "Went deep on JavaScript, React, and modern build tooling beyond WordPress." },
-  { year: "2022", title: "git commit -m \"full-time\"", description: "Left the 9-to-5 to freelance full-time as a WordPress and frontend developer." },
-  { year: "2024", title: "git merge design-and-code", description: "Started pairing design-to-code precision with performance-first engineering." },
-  { year: "2026", title: "git push --tags v2.0", description: "Now working with startups and agencies worldwide on custom WordPress and React builds." },
+export const experience = {
+  range: "2019 — Present",
+  duration: "7+ Years",
+  title: "Freelance Web & WordPress Developer",
+  bullets: [
+    {
+      text: "Delivered 200+ projects for clients across multiple continents (Fiverr + direct/agency clients)",
+    },
+    {
+      text: "Specialized in custom WordPress theme development, WooCommerce, and site performance optimization",
+    },
+    {
+      text: "Expanded into high-performance Next.js frontends and Headless WordPress integrations for international clients",
+      milestone: "2026",
+    },
+    {
+      text: "125+ verified reviews on Fiverr — long-term client relationships, repeat business",
+    },
+    {
+      text: "Remote collaboration experience with teams across US, UK, EU, and Australia markets",
+    },
+  ],
+};
+
+export const education = [
+  {
+    school: "Bangladesh University of Business & Technology (BUBT)",
+    degree: "BA, English Language and Literature",
+    years: "2016 – 2020",
+  },
+  {
+    school: "Dhaka Commerce College",
+    degree: "Higher Secondary Certificate, Business Studies",
+    years: "2012 – 2014",
+  },
 ];
 
 export const values = [

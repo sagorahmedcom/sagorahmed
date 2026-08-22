@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowUpRight, Code2, Zap, ShieldCheck, Star } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import Button from "@/components/Button";
@@ -11,12 +11,15 @@ import ProjectCard from "@/components/ProjectCard";
 import ServiceCard from "@/components/ServiceCard";
 import {
   siteConfig,
+  trustBadges,
   marqueeSkills,
   services,
   projects,
   process,
   testimonials,
 } from "@/lib/data";
+
+const trustBadgeIcons = { code: Code2, zap: Zap, shield: ShieldCheck, star: Star };
 
 export default function Home() {
   return (
@@ -27,38 +30,34 @@ export default function Home() {
           <FadeIn>
             <AvailabilityBadge />
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-              Hi, I&apos;m {siteConfig.name.split(" ")[0]}
-              <span className="text-accent">.</span>
-              <br />
-              I build <span className="text-gradient">fast websites</span> that
-              feel handcrafted.
+              I build high-performance websites that{" "}
+              <span className="text-gradient">load fast &amp; convert visitors</span>.
             </h1>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-fg-muted sm:text-lg">
-              {siteConfig.role} helping startups, agencies, and small
-              businesses ship custom WordPress sites and modern frontend
-              applications — with performance and clean code baked in.
+              {siteConfig.heroSubheadline}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button href="/portfolio">
-                View my work
+              <Button href="/contact">
+                Let&apos;s Build Something Better
                 <ArrowUpRight size={16} />
               </Button>
-              <Button href="/contact" variant="secondary">
-                Let&apos;s talk
+              <Button href="/portfolio" variant="secondary">
+                View my work
               </Button>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6 font-mono text-xs text-fg-muted">
-              <span className="flex items-center gap-1.5">
-                <MapPin size={14} className="text-accent" />
-                {siteConfig.location}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Sparkles size={14} className="text-accent" />
-                {siteConfig.yearsExperience}+ years experience
-              </span>
-              <span>{siteConfig.projectsShipped}+ projects shipped</span>
+            <div className="mt-10 grid grid-cols-2 gap-4 border-t border-border pt-6 sm:grid-cols-4">
+              {trustBadges.map((badge) => {
+                const Icon = trustBadgeIcons[badge.icon as keyof typeof trustBadgeIcons];
+                return (
+                  <div key={badge.title} className="flex flex-col gap-1.5">
+                    <Icon size={16} className="text-accent" />
+                    <span className="text-xs font-medium text-fg">{badge.title}</span>
+                    <span className="text-[11px] leading-snug text-fg-muted">{badge.subtitle}</span>
+                  </div>
+                );
+              })}
             </div>
           </FadeIn>
 
@@ -73,12 +72,12 @@ export default function Home() {
               </p>
               <p className="pl-4">
                 role:{" "}
-                <span className="text-accent">&quot;WordPress + Frontend&quot;</span>,
+                <span className="text-accent">&quot;WordPress + Next.js&quot;</span>,
               </p>
               <p className="pl-4">
                 stack:{" "}
                 <span className="text-accent">
-                  [&quot;PHP&quot;, &quot;React&quot;, &quot;Next.js&quot;]
+                  [&quot;WordPress&quot;, &quot;WooCommerce&quot;, &quot;Next.js&quot;]
                 </span>
                 ,
               </p>
@@ -104,10 +103,10 @@ export default function Home() {
       <section className="border-y border-border bg-bg-soft">
         <Container className="grid grid-cols-2 divide-x divide-y divide-border sm:grid-cols-4 sm:divide-y-0">
           {[
-            { label: "Years experience", value: `${siteConfig.yearsExperience}+` },
-            { label: "Projects shipped", value: `${siteConfig.projectsShipped}+` },
-            { label: "Clients served", value: `${siteConfig.clientsServed}+` },
-            { label: "Avg. speed score", value: "95+" },
+            { label: "Projects Delivered", value: `${siteConfig.projectsShipped}+` },
+            { label: "Years Experience", value: `${siteConfig.yearsExperience}+` },
+            { label: "Client Reviews", value: `${siteConfig.reviewsCount}+` },
+            { label: "Multi-Continent Clients", value: "Worldwide" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col items-center gap-1 px-4 py-8 text-center">
               <span className="font-mono text-3xl font-semibold text-accent sm:text-4xl">{stat.value}</span>
