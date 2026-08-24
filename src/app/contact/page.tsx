@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Clock, Briefcase } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ContactForm from "@/components/ContactForm";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
-import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, XIcon, FiverrIcon } from "@/components/icons";
 import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: `Get in touch with ${siteConfig.name} about your next WordPress or frontend project.`,
 };
 
-const iconMap = { github: GithubIcon, linkedin: LinkedinIcon, twitter: XIcon, briefcase: Briefcase };
+const iconMap = { github: GithubIcon, linkedin: LinkedinIcon, twitter: XIcon, fiverr: FiverrIcon };
 
 export default function ContactPage() {
   return (
@@ -43,6 +43,12 @@ export default function ContactPage() {
                 </span>
               }
             />
+            <a href={`tel:${siteConfig.phoneHref}`} className="flex items-center gap-3 text-sm text-fg-muted hover:text-fg">
+              <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
+                <Phone size={16} />
+              </span>
+              {siteConfig.phone}
+            </a>
             <a
               href={siteConfig.address.mapsUrl}
               target="_blank"

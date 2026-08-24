@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { Briefcase } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/data";
 import Container from "./Container";
 import Logo from "./Logo";
-import { GithubIcon, LinkedinIcon, XIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, XIcon, FiverrIcon } from "./icons";
 import ObfuscatedEmail from "./ObfuscatedEmail";
 
 const iconMap = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
   twitter: XIcon,
-  briefcase: Briefcase,
+  fiverr: FiverrIcon,
 };
 
 export default function Footer() {
@@ -36,6 +35,9 @@ export default function Footer() {
             domain={siteConfig.emailDomain}
             className="transition-colors hover:text-fg"
           />
+          <a href={`tel:${siteConfig.phoneHref}`} className="transition-colors hover:text-fg">
+            {siteConfig.phone}
+          </a>
           <a
             href={siteConfig.address.mapsUrl}
             target="_blank"

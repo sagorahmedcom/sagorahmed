@@ -24,6 +24,23 @@ export function XIcon({ size = 16, className }: IconProps) {
   );
 }
 
+export function FiverrIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} className={className} fill="currentColor" aria-hidden="true">
+      <text
+        x="12"
+        y="18.5"
+        textAnchor="middle"
+        fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace"
+        fontWeight="700"
+        fontSize="19"
+      >
+        f
+      </text>
+    </svg>
+  );
+}
+
 export function WordpressIcon({ size = 16, className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} className={className} aria-hidden="true">

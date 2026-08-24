@@ -17,16 +17,18 @@ export const siteConfig = {
   // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
   emailUser: "iamsagorahmed",
   emailDomain: "gmail.com",
+  phone: "01333-393192",
+  phoneHref: "+8801333393192",
   availableForWork: true,
   yearsExperience: 7,
   projectsShipped: 200,
   reviewsCount: 125,
   countriesCount: 30,
   socials: [
-    { label: "GitHub", href: "https://github.com/", icon: "github" },
-    { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
-    { label: "X / Twitter", href: "https://x.com/", icon: "twitter" },
-    { label: "Fiverr", href: "https://www.fiverr.com/", icon: "briefcase" },
+    { label: "GitHub", href: "https://github.com/sagorahmedcom", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sagorahmedcom/", icon: "linkedin" },
+    { label: "X / Twitter", href: "https://x.com/sagorahmedcom", icon: "twitter" },
+    { label: "Fiverr", href: "https://www.fiverr.com/sagorself", icon: "fiverr" },
   ],
 };
 
