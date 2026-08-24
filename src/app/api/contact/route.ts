@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
     const budgetLabel = budgetOptions.find((o) => o.value === budget)?.label ?? budget;
     const fromAddress = process.env.CONTACT_FROM_EMAIL ?? "Sagor Ahmed <noreply@sagorahmed.com>";
-    const ownerAddress = process.env.CONTACT_TO_EMAIL ?? "sagor@sagorahmed.com";
+    const ownerAddress = process.env.CONTACT_TO_EMAIL ?? "iamsagorahmed@gmail.com";
 
     const { error } = await resend.emails.send({
       from: fromAddress,

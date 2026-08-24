@@ -30,13 +30,17 @@ export default function Footer() {
           ))}
         </nav>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-fg-muted">
+        <div className="flex flex-col items-center gap-2 text-sm text-fg-muted">
           <ObfuscatedEmail
             user={siteConfig.emailUser}
             domain={siteConfig.emailDomain}
             className="transition-colors hover:text-fg"
           />
-          <span>{siteConfig.location}</span>
+          <p className="max-w-xs text-xs leading-relaxed">
+            {siteConfig.address.line1}, {siteConfig.address.line2}
+            <br />
+            {siteConfig.address.city} {siteConfig.address.postal}, {siteConfig.address.country}
+          </p>
         </div>
 
         <div className="flex items-center gap-3">

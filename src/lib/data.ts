@@ -5,9 +5,16 @@ export const siteConfig = {
   heroSubheadline: "WordPress Developer | Custom Themes & High-Performance Next.js Frontends",
   shortTagline: "Custom WordPress themes and high-performance Next.js frontends for businesses worldwide.",
   location: "Dhaka, Bangladesh",
+  address: {
+    line1: "Ward No. 05, Shahid Vila, Borodeshi Passim",
+    line2: "Begun Bari, Amin Bazar, Savar",
+    city: "Dhaka",
+    postal: "1348",
+    country: "Bangladesh",
+  },
   // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
-  emailUser: "sagor",
-  emailDomain: "sagorahmed.com",
+  emailUser: "iamsagorahmed",
+  emailDomain: "gmail.com",
   availableForWork: true,
   yearsExperience: 7,
   projectsShipped: 200,

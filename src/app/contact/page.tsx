@@ -43,11 +43,15 @@ export default function ContactPage() {
                 </span>
               }
             />
-            <div className="flex items-center gap-3 text-sm text-fg-muted">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
+            <div className="flex items-start gap-3 text-sm text-fg-muted">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border text-accent">
                 <MapPin size={16} />
               </span>
-              {siteConfig.location}
+              <span className="pt-2 leading-relaxed">
+                {siteConfig.address.line1}, {siteConfig.address.line2}
+                <br />
+                {siteConfig.address.city} {siteConfig.address.postal}, {siteConfig.address.country}
+              </span>
             </div>
             <div className="flex items-center gap-3 text-sm text-fg-muted">
               <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
