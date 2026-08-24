@@ -22,7 +22,12 @@ export default function Home() {
         <Container className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
           <FadeIn>
             <AvailabilityBadge />
-            <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+            <p className="mt-6 flex items-center gap-2 font-mono text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+              <span className="text-accent">{"<"}</span>
+              {siteConfig.name}
+              <span className="text-accent">{"/>"}</span>
+            </p>
+            <h1 className="mt-3 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               I build high-performance websites that{" "}
               <span className="text-gradient">load fast &amp; convert visitors</span>.
             </h1>

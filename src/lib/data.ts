@@ -11,6 +11,8 @@ export const siteConfig = {
     city: "Dhaka",
     postal: "1348",
     country: "Bangladesh",
+    mapsUrl:
+      "https://www.google.com/maps/place/Sagor+Ahmed/@23.7856974,90.3311227,17.6z/data=!4m6!3m5!1s0x3755c06051bec195:0xdc01e07794db3f19!8m2!3d23.7866708!4d90.3311726!16s%2Fg%2F11j0nfmm1g",
   },
   // Split so the address never exists as one literal string in source/markup — see ObfuscatedEmail.
   emailUser: "iamsagorahmed",

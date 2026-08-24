@@ -36,11 +36,16 @@ export default function Footer() {
             domain={siteConfig.emailDomain}
             className="transition-colors hover:text-fg"
           />
-          <p className="max-w-xs text-xs leading-relaxed">
+          <a
+            href={siteConfig.address.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="max-w-xs text-xs leading-relaxed transition-colors hover:text-fg"
+          >
             {siteConfig.address.line1}, {siteConfig.address.line2}
             <br />
             {siteConfig.address.city} {siteConfig.address.postal}, {siteConfig.address.country}
-          </p>
+          </a>
         </div>
 
         <div className="flex items-center gap-3">

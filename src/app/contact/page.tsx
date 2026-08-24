@@ -43,7 +43,12 @@ export default function ContactPage() {
                 </span>
               }
             />
-            <div className="flex items-start gap-3 text-sm text-fg-muted">
+            <a
+              href={siteConfig.address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 text-sm text-fg-muted hover:text-fg"
+            >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-border text-accent">
                 <MapPin size={16} />
               </span>
@@ -52,7 +57,7 @@ export default function ContactPage() {
                 <br />
                 {siteConfig.address.city} {siteConfig.address.postal}, {siteConfig.address.country}
               </span>
-            </div>
+            </a>
             <div className="flex items-center gap-3 text-sm text-fg-muted">
               <span className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-accent">
                 <Clock size={16} />
