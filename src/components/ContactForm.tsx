@@ -45,7 +45,7 @@ export default function ContactForm() {
       }
 
       toast.success("Message sent", {
-        description: "Thanks for reaching out — I'll reply within a day.",
+        description: "Thanks for reaching out. I'll reply within a day.",
       });
       reset();
       turnstileRef.current?.reset();

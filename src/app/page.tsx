@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Code2, Zap, ShieldCheck, Star, Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import Button from "@/components/Button";
-import TerminalWindow from "@/components/TerminalWindow";
 import Marquee from "@/components/Marquee";
 import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
@@ -22,11 +22,7 @@ export default function Home() {
         <Container className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
           <FadeIn>
             <AvailabilityBadge />
-            <p className="mt-6 flex items-center gap-2 font-mono text-2xl font-bold tracking-tight text-fg sm:text-3xl">
-              <span className="text-accent">{"<"}</span>
-              {siteConfig.name}
-              <span className="text-accent">{"/>"}</span>
-            </p>
+            <p className="mt-6 text-2xl font-bold tracking-tight text-fg sm:text-3xl">{siteConfig.name}</p>
             <h1 className="mt-3 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               I build high-performance websites that{" "}
               <span className="text-gradient">load fast &amp; convert visitors</span>.
@@ -59,40 +55,28 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.15} className="animate-float">
-            <TerminalWindow title="whoami.js">
-              <p>
-                <span className="text-accent-2">const</span>{" "}
-                <span className="text-fg">developer</span> = {"{"}
-              </p>
-              <p className="pl-4">
-                name: <span className="text-accent">&quot;{siteConfig.name}&quot;</span>,
-              </p>
-              <p className="pl-4">
-                role:{" "}
-                <span className="text-accent">&quot;WordPress + Next.js&quot;</span>,
-              </p>
-              <p className="pl-4">
-                stack:{" "}
-                <span className="text-accent">
-                  [&quot;WordPress&quot;, &quot;WooCommerce&quot;, &quot;Next.js&quot;]
+          <FadeIn delay={0.15} className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-black/10 sm:h-96 sm:w-96">
+                <Image
+                  src="/sagorahmed.jpg"
+                  alt={siteConfig.name}
+                  fill
+                  sizes="(min-width: 1024px) 384px, 320px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-5 -left-5 flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-lg">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                  <Star size={18} />
                 </span>
-                ,
-              </p>
-              <p className="pl-4">
-                available:{" "}
-                <span className="text-accent-2">{String(siteConfig.availableForWork)}</span>
-                ,
-              </p>
-              <p>{"};"}</p>
-              <p className="mt-4 text-fg-faint">
-                <span className="text-accent-2">export default</span> developer;
-              </p>
-              <p className="mt-4 flex items-center gap-1 text-fg-muted">
-                <span className="text-accent">❯</span> ready to build
-                <span className="inline-block h-4 w-2 animate-blink bg-accent" />
-              </p>
-            </TerminalWindow>
+                <div>
+                  <p className="text-sm font-semibold text-fg">{siteConfig.reviewsCount}+ Reviews</p>
+                  <p className="text-xs text-fg-muted">5-star on Fiverr</p>
+                </div>
+              </div>
+            </div>
           </FadeIn>
         </Container>
       </section>
@@ -160,7 +144,7 @@ export default function Home() {
               <Sparkles size={20} />
             </span>
             <p className="relative max-w-md text-sm leading-relaxed text-fg-muted">
-              I&apos;m putting together detailed case studies from recent client work. Check back soon — or get in
+              I&apos;m putting together detailed case studies from recent client work. Check back soon, or get in
               touch and I&apos;ll walk you through examples directly.
             </p>
             <Link
@@ -191,7 +175,7 @@ export default function Home() {
         <Container>
           <FadeIn className="glow-accent relative overflow-hidden rounded-2xl border border-border bg-surface px-6 py-16 text-center sm:px-16">
             <div className="pointer-events-none absolute inset-0 bg-dots opacity-30" />
-            <p className="relative font-mono text-sm text-accent">{"// let's build something"}</p>
+            <p className="relative font-mono text-sm uppercase tracking-wider text-accent">Let&apos;s talk</p>
             <h2 className="relative mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
               Got a project in mind?
             </h2>

@@ -48,10 +48,9 @@ export default function Navbar() {
                 href={link.href}
                 className={cn(
                   "rounded-md px-3 py-2 font-mono text-sm transition-colors",
-                  active ? "text-accent" : "text-fg-muted hover:text-fg"
+                  active ? "font-semibold text-accent" : "text-fg-muted hover:text-fg"
                 )}
               >
-                {active && <span className="mr-1 text-accent">$</span>}
                 {link.label}
               </Link>
             );

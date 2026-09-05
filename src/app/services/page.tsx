@@ -25,7 +25,7 @@ export default function ServicesPage() {
               Everything you need to launch and grow online
             </h1>
             <p className="mt-6 text-base leading-relaxed text-fg-muted sm:text-lg">
-              From a single landing page to a full custom WordPress rebuild or React application — pick a service
+              From a single landing page to a full custom WordPress rebuild or React application, pick a service
               below, or reach out and I&apos;ll help you figure out the right scope.
             </p>
           </FadeIn>
@@ -76,13 +76,13 @@ export default function ServicesPage() {
         <Container>
           <FadeIn className="glow-accent relative overflow-hidden rounded-2xl border border-border bg-surface px-6 py-16 text-center sm:px-16">
             <div className="pointer-events-none absolute inset-0 bg-dots opacity-30" />
-            <p className="relative font-mono text-sm text-accent">{"// not sure which service fits?"}</p>
+            <p className="relative font-mono text-sm uppercase tracking-wider text-accent">Not sure yet?</p>
             <h2 className="relative mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
               Let&apos;s scope it out together
             </h2>
             <p className="relative mx-auto mt-4 max-w-md text-fg-muted">
               Tell me what you&apos;re trying to build and I&apos;ll recommend the right approach and a realistic
-              timeline — no obligation.
+              timeline, no obligation.
             </p>
             <div className="relative mt-8 flex justify-center">
               <Button href="/contact">

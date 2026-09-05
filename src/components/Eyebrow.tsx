@@ -10,11 +10,10 @@ export default function Eyebrow({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs text-accent",
+        "inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs uppercase tracking-wider text-accent",
         className
       )}
     >
-      <span className="text-fg-faint">{"//"}</span>
       {children}
     </div>
   );

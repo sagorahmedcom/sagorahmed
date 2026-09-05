@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       <section className="pb-16 pt-14 sm:pt-20">
         <Container className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:items-center">
-          <FadeIn className="order-2 flex flex-col items-center gap-4 lg:order-1">
+          <FadeIn className="order-2 flex justify-center lg:order-1">
             <div className="relative h-64 w-64 overflow-hidden rounded-2xl border border-border sm:h-80 sm:w-80">
               <Image
                 src="/sagorahmed.jpg"
@@ -29,9 +29,6 @@ export default function AboutPage() {
                 className="object-cover"
                 priority
               />
-            </div>
-            <div className="rounded-lg border border-border bg-surface px-4 py-2.5 font-mono text-xs text-fg-muted shadow-lg">
-              <span className="text-accent">const</span> role = &quot;developer&quot;;
             </div>
           </FadeIn>
 
@@ -44,12 +41,12 @@ export default function AboutPage() {
               I&apos;m {siteConfig.name}, a web developer with {siteConfig.yearsExperience}+ years of experience
               turning ideas into fast, reliable websites for businesses across the world. Since 2019, I&apos;ve
               delivered {siteConfig.projectsShipped}+ projects for clients across multiple continents, specializing
-              in custom WordPress theme development, WooCommerce, and — more recently — high-performance Next.js
-              frontends and Headless WordPress architecture. Based in {siteConfig.location}, I work remotely with
-              clients worldwide.
+              in custom WordPress theme development and WooCommerce, with a recent focus on high-performance
+              Next.js frontends and Headless WordPress architecture. Based in {siteConfig.location}, I work
+              remotely with clients worldwide.
             </p>
             <p className="mt-4 text-base leading-relaxed text-fg-muted sm:text-lg">
-              I studied English Language &amp; Literature at BUBT (2016–2020) — which, alongside the code, gives me
+              I studied English Language &amp; Literature at BUBT (2016–2020), which, alongside the code, gives me
               an edge in understanding client requirements clearly and communicating without friction, something a
               lot of dev-client relationships struggle with.
             </p>
@@ -150,7 +147,7 @@ export default function AboutPage() {
               {education.map((item) => (
                 <div key={item.school} className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
                   <span className="text-fg-muted">
-                    {item.school} — {item.degree}
+                    {item.school}, {item.degree}
                   </span>
                   <span className="font-mono text-xs text-fg-faint">{item.years}</span>
                 </div>

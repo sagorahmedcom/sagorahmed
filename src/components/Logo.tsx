@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export default function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("flex items-center gap-2.5 font-mono text-sm font-semibold text-fg", className)}>
+    <Link href="/" className={cn("flex items-center gap-2.5 text-sm font-semibold tracking-tight text-fg", className)}>
       <Image
         src="/sagorahmed.jpg"
         alt=""
@@ -13,11 +13,7 @@ export default function Logo({ className }: { className?: string }) {
         height={28}
         className="h-7 w-7 shrink-0 rounded-full border border-border object-cover"
       />
-      <span>
-        <span className="text-accent">{"<"}</span>
-        {siteConfig.name}
-        <span className="text-accent">{"/>"}</span>
-      </span>
+      <span>{siteConfig.name}</span>
     </Link>
   );
 }

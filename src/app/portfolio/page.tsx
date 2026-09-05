@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: `Case studies from ${siteConfig.name}'s WordPress and Next.js projects — coming soon.`,
+  description: `Case studies from ${siteConfig.name}'s WordPress and Next.js projects, coming soon.`,
 };
 
 export default function PortfolioPage() {
@@ -20,8 +20,8 @@ export default function PortfolioPage() {
             <Eyebrow>portfolio</Eyebrow>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Case studies coming soon</h1>
             <p className="mt-6 text-base leading-relaxed text-fg-muted sm:text-lg">
-              I&apos;m putting together detailed write-ups from recent WordPress, WooCommerce, and Next.js projects —
-              real numbers, real challenges, real outcomes. This page will fill in soon.
+              I&apos;m putting together detailed write-ups from recent WordPress, WooCommerce, and Next.js
+              projects, with the numbers and challenges behind each one. This page will fill in soon.
             </p>
           </FadeIn>
         </Container>
@@ -54,7 +54,7 @@ export default function PortfolioPage() {
         <Container>
           <FadeIn className="glow-accent relative overflow-hidden rounded-2xl border border-border bg-surface px-6 py-16 text-center sm:px-16">
             <div className="pointer-events-none absolute inset-0 bg-dots opacity-30" />
-            <p className="relative font-mono text-sm text-accent">{"// let's build something"}</p>
+            <p className="relative font-mono text-sm uppercase tracking-wider text-accent">Let&apos;s talk</p>
             <h2 className="relative mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
               Let&apos;s build your next project
             </h2>

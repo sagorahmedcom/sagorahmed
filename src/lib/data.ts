@@ -33,17 +33,17 @@ export const siteConfig = {
 };
 
 export const trustBadges = [
-  { title: "Custom Development", subtitle: "Tailored to your goals", icon: "code" },
-  { title: "Performance Focused", subtitle: "Fast, optimized & reliable", icon: "zap" },
-  { title: "Secure & Scalable", subtitle: "Built for long-term growth", icon: "shield" },
-  { title: `${siteConfig.reviewsCount}+ Reviews`, subtitle: "Happy clients on Fiverr", icon: "star" },
+  { title: "Custom Development", subtitle: "No page builder templates", icon: "code" },
+  { title: "Performance Focused", subtitle: "90+ PageSpeed scores as standard", icon: "zap" },
+  { title: "Secure & Scalable", subtitle: "Hardened installs, sane WooCommerce configs", icon: "shield" },
+  { title: `${siteConfig.reviewsCount}+ Reviews`, subtitle: "5-star rated on Fiverr", icon: "star" },
 ] as const;
 
 export const focusAreas = [
   "Custom WordPress theme development & site optimization",
   "Headless WordPress + Next.js frontend builds",
   "WooCommerce stores that are fast, stable, and easy to manage",
-  "Performance tuning — Core Web Vitals, load speed, SEO-readiness",
+  "Performance tuning: Core Web Vitals, load speed, SEO-readiness",
   "Long-term collaboration with international teams & agencies",
 ];
 
@@ -61,13 +61,13 @@ export const bentoStats = [
     number: `${siteConfig.projectsShipped}+`,
     title: "Projects Delivered",
     description:
-      "Across WordPress, WooCommerce, custom themes, and Next.js frontends — all performance-focused and client-first.",
+      "Across WordPress, WooCommerce, custom themes, and Next.js frontends, all performance-focused and client-first.",
   },
   {
     id: "workflow",
     size: "small",
     title: "Seamless Dev Workflow",
-    description: "From design to deployment — WordPress, Elementor, and Next.js, kept clean, fast, and collaborative.",
+    description: "From design to deployment on WordPress, Elementor, or Next.js, I keep things clean, fast, and collaborative.",
     icons: ["wordpress", "nextjs", "cloudflare"],
   },
   {
@@ -75,7 +75,7 @@ export const bentoStats = [
     size: "medium",
     number: `${siteConfig.reviewsCount}+`,
     title: "Client Reviews",
-    description: "Rated 5-stars on Fiverr — I deliver exactly what your business needs.",
+    description: "Rated 5-stars on Fiverr for delivering exactly what your business needs.",
   },
   {
     id: "experience",
@@ -90,7 +90,7 @@ export const bentoStats = [
     number: `${siteConfig.countriesCount}+`,
     title: `Clients in ${siteConfig.countriesCount}+ Countries`,
     description:
-      "From the US and Canada to Europe, Australia, and Asia — I've delivered projects across 16% of the world's countries.",
+      "From the US and Canada to Europe, Australia, and Asia, I've delivered projects across 16% of the world's countries.",
   },
 ] as const;
 
@@ -133,7 +133,7 @@ export const services = [
   {
     slug: "wordpress-development",
     title: "Custom WordPress Development",
-    summary: "Pixel-perfect, fast-loading WordPress sites built from scratch — no bloated page builders.",
+    summary: "Pixel-perfect, fast-loading WordPress sites built from scratch, without bloated page builders.",
     features: [
       "Custom theme coded from a Figma design",
       "Advanced Custom Fields (ACF) architecture",
@@ -218,7 +218,7 @@ export const process = [
   {
     step: "03",
     title: "Build",
-    description: "Clean, documented code — WordPress or React — with progress check-ins so there are no surprises.",
+    description: "Clean, documented code on WordPress or React, with progress check-ins so there are no surprises.",
   },
   {
     step: "04",
@@ -256,7 +256,7 @@ export const experience = {
       milestone: "2026",
     },
     {
-      text: "125+ verified reviews on Fiverr — long-term client relationships, repeat business",
+      text: "125+ verified reviews on Fiverr, built on long-term client relationships and repeat business",
     },
     {
       text: "Remote collaboration experience with teams across US, UK, EU, and Australia markets",
@@ -280,7 +280,7 @@ export const education = [
 export const values = [
   {
     title: "Clean code, no shortcuts",
-    description: "No bloated page builders or copy-pasted plugins. Every line is written to be readable and maintainable.",
+    description: "No copy-pasted plugins or hacked-together fixes. Every line is written to be readable and maintainable.",
   },
   {
     title: "Performance is a feature",
@@ -305,7 +305,7 @@ export const faqs = [
   {
     question: "How long does a typical project take?",
     answer:
-      "A landing page usually takes 1–2 weeks. A full custom WordPress or WooCommerce build runs 3–6 weeks. Frontend applications vary based on scope — I'll give you a firm timeline after a quick discovery call.",
+      "A landing page usually takes 1–2 weeks. A full custom WordPress or WooCommerce build runs 3–6 weeks. Frontend applications vary based on scope. I'll give you a firm timeline after a quick discovery call.",
   },
   {
     question: "Do you offer ongoing support after launch?",
@@ -320,6 +320,6 @@ export const faqs = [
   {
     question: "How do payments work?",
     answer:
-      "Projects are split into milestones — typically 50% upfront, 50% on delivery for smaller projects, or split across milestones for larger ones. Invoices are sent via bank transfer or Wise.",
+      "Projects are split into milestones: typically 50% upfront and 50% on delivery for smaller projects, or spread across milestones for larger ones. Invoices are sent via bank transfer or Wise.",
   },
 ];

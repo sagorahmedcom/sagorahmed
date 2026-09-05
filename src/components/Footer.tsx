@@ -73,9 +73,7 @@ export default function Footer() {
         <p>
           © {year} {siteConfig.name}. All rights reserved.
         </p>
-        <p>
-          Built with Next.js &amp; Tailwind CSS<span className="text-accent"> — </span>designed to ship fast.
-        </p>
+        <p>Built with Next.js &amp; Tailwind CSS.</p>
       </Container>
     </footer>
   );
