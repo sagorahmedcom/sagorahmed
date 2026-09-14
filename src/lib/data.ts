@@ -110,18 +110,6 @@ export const skillGroups = [
   },
 ];
 
-export const marqueeSkills = [
-  "WordPress",
-  "WooCommerce",
-  "Elementor",
-  "Gravity Forms",
-  "JetEngine / Crocoblock",
-  "Next.js",
-  "React.js",
-  "JavaScript",
-  "Headless WordPress",
-];
-
 export const services = [
   {
     slug: "wordpress-development",

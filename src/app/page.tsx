@@ -3,13 +3,12 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import Button from "@/components/Button";
-import Marquee from "@/components/Marquee";
 import FadeIn from "@/components/FadeIn";
 import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ServiceCard from "@/components/ServiceCard";
 import BentoStats from "@/components/BentoStats";
 import ProcessSteps from "@/components/ProcessSteps";
-import { siteConfig, marqueeSkills, services } from "@/lib/data";
+import { siteConfig, services } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -39,16 +38,6 @@ export default function Home() {
             </div>
           </FadeIn>
         </Container>
-      </section>
-
-      {/* Tech marquee */}
-      <section className="py-12">
-        <Container>
-          <p className="mb-5 text-center font-mono text-xs uppercase tracking-wider text-fg-faint">
-            Tools &amp; tech I work with daily
-          </p>
-        </Container>
-        <Marquee items={marqueeSkills} />
       </section>
 
       {/* Stats */}
