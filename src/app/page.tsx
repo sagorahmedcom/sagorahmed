@@ -41,13 +41,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Stats */}
-      <section className="py-20">
-        <Container>
-          <BentoStats />
-        </Container>
-      </section>
-
       {/* Tech marquee */}
       <section className="py-12">
         <Container>
@@ -56,6 +49,13 @@ export default function Home() {
           </p>
         </Container>
         <Marquee items={marqueeSkills} />
+      </section>
+
+      {/* Stats */}
+      <section className="py-20">
+        <Container>
+          <BentoStats />
+        </Container>
       </section>
 
       {/* Services preview */}
