@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowUpRight, Code2, Zap, ShieldCheck, Star, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import Button from "@/components/Button";
@@ -10,17 +9,15 @@ import AvailabilityBadge from "@/components/AvailabilityBadge";
 import ServiceCard from "@/components/ServiceCard";
 import BentoStats from "@/components/BentoStats";
 import ProcessSteps from "@/components/ProcessSteps";
-import { siteConfig, trustBadges, marqueeSkills, services } from "@/lib/data";
-
-const trustBadgeIcons = { code: Code2, zap: Zap, shield: ShieldCheck, star: Star };
+import { siteConfig, marqueeSkills, services } from "@/lib/data";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden pb-20 pt-14 sm:pt-20">
-        <Container className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
-          <FadeIn>
+        <Container>
+          <FadeIn className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <AvailabilityBadge />
             <p className="mt-6 text-2xl font-bold tracking-tight text-fg sm:text-3xl">{siteConfig.name}</p>
             <h1 className="mt-3 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
@@ -31,7 +28,7 @@ export default function Home() {
               {siteConfig.heroSubheadline}
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button href="/contact">
                 Let&apos;s Build Something Better
                 <ArrowUpRight size={16} />
@@ -39,43 +36,6 @@ export default function Home() {
               <Button href="/portfolio" variant="secondary">
                 View my work
               </Button>
-            </div>
-
-            <div className="mt-10 grid grid-cols-2 gap-4 border-t border-border pt-6 sm:grid-cols-4">
-              {trustBadges.map((badge) => {
-                const Icon = trustBadgeIcons[badge.icon as keyof typeof trustBadgeIcons];
-                return (
-                  <div key={badge.title} className="flex flex-col gap-1.5">
-                    <Icon size={16} className="text-accent" />
-                    <span className="text-xs font-medium text-fg">{badge.title}</span>
-                    <span className="text-[11px] leading-snug text-fg-muted">{badge.subtitle}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.15} className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-black/10 sm:h-96 sm:w-96">
-                <Image
-                  src="/sagorahmed.jpg"
-                  alt={siteConfig.name}
-                  fill
-                  sizes="(min-width: 1024px) 384px, 320px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-5 -left-5 flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 shadow-lg">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
-                  <Star size={18} />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-fg">{siteConfig.reviewsCount}+ Reviews</p>
-                  <p className="text-xs text-fg-muted">5-star on Fiverr</p>
-                </div>
-              </div>
             </div>
           </FadeIn>
         </Container>

@@ -32,13 +32,6 @@ export const siteConfig = {
   ],
 };
 
-export const trustBadges = [
-  { title: "Custom Development", subtitle: "No page builder templates", icon: "code" },
-  { title: "Performance Focused", subtitle: "90+ PageSpeed scores as standard", icon: "zap" },
-  { title: "Secure & Scalable", subtitle: "Hardened installs, sane WooCommerce configs", icon: "shield" },
-  { title: `${siteConfig.reviewsCount}+ Reviews`, subtitle: "5-star rated on Fiverr", icon: "star" },
-] as const;
-
 export const focusAreas = [
   "Custom WordPress theme development & site optimization",
   "Headless WordPress + Next.js frontend builds",
