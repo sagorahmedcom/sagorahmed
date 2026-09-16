@@ -160,16 +160,24 @@ body {
   border: 1px solid var(--color-border);
 }
 
-/* Theme toggle icon swap — driven by [data-theme], no JS state needed */
+/* Theme toggle thumb icon — shows the CURRENTLY active mode, driven by [data-theme], no JS state needed */
 .theme-icon-sun {
-  display: block;
+  display: none;
 }
 .theme-icon-moon {
-  display: none;
+  display: block;
 }
 [data-theme="light"] .theme-icon-sun {
-  display: none;
+  display: block;
 }
 [data-theme="light"] .theme-icon-moon {
-  display: block;
+  display: none;
+}
+
+.theme-thumb {
+  transform: translateX(24px);
+  transition: transform 0.25s ease;
+}
+[data-theme="light"] .theme-thumb {
+  transform: translateX(0);
 }
