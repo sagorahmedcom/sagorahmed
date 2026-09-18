@@ -11,10 +11,11 @@ import {
 } from "@react-email/components";
 
 const brand = {
-  indigo: "#2B2D8F",
-  violet: "#4F52FF",
-  black: "#0D0E1A",
-  white: "#F7F7FB",
+  purple: "#A855F7",
+  blue: "#6366F1",
+  teal: "#2DD4BF",
+  black: "#0A0A0F",
+  white: "#F5F4FA",
 };
 
 type ContactEmailProps = {
@@ -35,7 +36,7 @@ export default function ContactEmail({ name, email, budgetLabel, message }: Cont
         <Container style={{ maxWidth: 560, margin: "0 auto" }}>
           <div
             style={{
-              background: `linear-gradient(135deg, ${brand.indigo}, ${brand.violet})`,
+              background: `linear-gradient(135deg, ${brand.purple}, ${brand.blue}, ${brand.teal})`,
               borderRadius: "16px 16px 0 0",
               padding: "28px 32px",
             }}
@@ -82,7 +83,7 @@ function Row({ label, value }: { label: string; value: string }) {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0" }}>
       <Text style={{ fontSize: 14, color: "#5a5a6a", margin: 0 }}>{label}</Text>
-      <Text style={{ fontSize: 14, color: "#0D0E1A", fontWeight: 600, margin: 0 }}>{value}</Text>
+      <Text style={{ fontSize: 14, color: "#0A0A0F", fontWeight: 600, margin: 0 }}>{value}</Text>
     </div>
   );
 }

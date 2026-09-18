@@ -22,7 +22,7 @@ export default function ThemeToggle({ className }: { className?: string }) {
     >
       <Sun size={14} className="text-fg-faint" />
       <Moon size={14} className="text-fg-faint" />
-      <span className="theme-thumb absolute left-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-black text-brand-white shadow-md">
+      <span className="theme-thumb absolute left-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-bg-base text-white shadow-md">
         <Sun size={13} className="theme-icon-sun" />
         <Moon size={13} className="theme-icon-moon" fill="currentColor" />
       </span>

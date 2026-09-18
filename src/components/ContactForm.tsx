@@ -108,7 +108,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={submitting || !turnstileToken}
-        className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 font-mono text-sm font-medium text-accent-contrast transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-purple via-accent-blue to-accent-teal px-5 py-3 font-body text-sm font-medium text-white transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {submitting ? (
           <>

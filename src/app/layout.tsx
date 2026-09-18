@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import Script from "next/script";
 import { Toaster } from "sonner";
 import Navbar from "@/components/Navbar";
@@ -19,14 +19,16 @@ const themeInitScript = `
 })();
 `;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontBricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontInter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const title = `${siteConfig.name} — WordPress & Frontend Developer`;
@@ -54,13 +56,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`${fontBricolage.variable} ${fontInter.variable} h-full`} suppressHydrationWarning>
       <body className="relative flex min-h-full flex-col bg-bg text-fg antialiased">
         <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}
         </Script>
         <div className="pointer-events-none fixed inset-0 -z-10 bg-grid" />
-        <div className="pointer-events-none fixed left-1/2 top-[-10%] -z-10 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]" />
+        <div className="pointer-events-none fixed left-1/2 top-[-10%] -z-10 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-br from-glow-purple/25 to-glow-indigo/10 blur-[140px]" />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
@@ -68,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           position="bottom-right"
           richColors
           closeButton
-          toastOptions={{ style: { fontFamily: "var(--font-geist-sans)" } }}
+          toastOptions={{ style: { fontFamily: "var(--font-body)" } }}
         />
       </body>
     </html>

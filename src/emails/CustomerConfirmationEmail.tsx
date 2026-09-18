@@ -11,10 +11,11 @@ import {
 } from "@react-email/components";
 
 const brand = {
-  indigo: "#2B2D8F",
-  violet: "#4F52FF",
-  black: "#0D0E1A",
-  white: "#F7F7FB",
+  purple: "#A855F7",
+  blue: "#6366F1",
+  teal: "#2DD4BF",
+  black: "#0A0A0F",
+  white: "#F5F4FA",
 };
 
 type CustomerConfirmationEmailProps = {
@@ -34,7 +35,7 @@ export default function CustomerConfirmationEmail({ name, budgetLabel, message }
         <Container style={{ maxWidth: 560, margin: "0 auto" }}>
           <div
             style={{
-              background: `linear-gradient(135deg, ${brand.indigo}, ${brand.violet})`,
+              background: `linear-gradient(135deg, ${brand.purple}, ${brand.blue}, ${brand.teal})`,
               borderRadius: "16px 16px 0 0",
               padding: "28px 32px",
             }}

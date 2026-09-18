@@ -5,10 +5,11 @@ import type { ComponentPropsWithoutRef } from "react";
 type Variant = "primary" | "secondary" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-mono text-sm font-medium transition-all duration-200 whitespace-nowrap";
+  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-body text-sm font-medium transition-all duration-200 whitespace-nowrap";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-accent-contrast hover:brightness-110 hover:-translate-y-0.5 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]",
+  primary:
+    "bg-gradient-to-r from-accent-purple via-accent-blue to-accent-teal text-white hover:brightness-110 hover:-translate-y-0.5 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]",
   secondary:
     "border border-border-strong bg-surface text-fg hover:border-accent/50 hover:bg-surface-hover hover:-translate-y-0.5",
   ghost: "text-fg-muted hover:text-fg",
